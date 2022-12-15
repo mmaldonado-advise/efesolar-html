@@ -373,12 +373,7 @@
                 if (td) {
                     var txtValue = td.textContent || td.innerText;
                     txtValue = txtValue.replaceAll("/","-")
-                    console.log(txtValue)
-                    console.log(startDate)
-                    console.log(endDate)
-                    console.log(txtValue > startDate)
-                    console.log(txtValue < endDate)
-                    if (txtValue > startDate && txtValue < endDate) {
+                    if (txtValue >= startDate && txtValue <= endDate) {
                         tr[i].style.display = "";
                     } else {
                         tr[i].style.display = "none";
