@@ -102,7 +102,7 @@
                     </div>
                   </a>
                   <ul class="nav collapse show" id="dashboard">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-expanded="false">
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.html" aria-expanded="false">
                         <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Inicio</span>
                         </div>
                       </a>
@@ -111,20 +111,20 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <!-- label-->
-                  <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                   <!-- label-->
+                   <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
                     <div class="col-auto navbar-vertical-label">Tablas
                     </div>
                     <div class="col ps-0">
                       <hr class="mb-0 navbar-vertical-divider" />
                     </div>
                   </div>
-                  <!-- parent pages--><a class="nav-link" href="app/chat.html" role="button" aria-expanded="false">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Valores Energia</span>
+                  <!-- parent pages--><a class="nav-link" href="energy.html" role="button" aria-expanded="false">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-bolt"></span></span><span class="nav-link-text ps-1">Valores Energia</span>
                     </div>
                   </a>
-                  <!-- parent pages--><a class="nav-link" href="app/chat.html" role="button" aria-expanded="false">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Presupuesto</span>
+                  <!-- parent pages--><a class="nav-link" href="budget.html" role="button" aria-expanded="false">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-coins"></span></span><span class="nav-link-text ps-1">Presupuesto</span>
                     </div>
                   </a>
                   <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
@@ -134,8 +134,8 @@
                       <hr class="mb-0 navbar-vertical-divider" />
                     </div>
                   </div>
-                  <!-- parent pages--><a class="nav-link" href="app/calendar.html" role="button" aria-expanded="false">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-calendar-alt"></span></span><span class="nav-link-text ps-1">Usuarios</span>
+                  <!-- parent pages--><a class="nav-link" href="user.html" role="button" aria-expanded="false">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-user"></span></span><span class="nav-link-text ps-1">Usuarios</span>
                     </div>
                   </a>
                 </li>
@@ -176,10 +176,10 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end py-0" aria-labelledby="navbarDropdownUser">
                   <div class="bg-white dark__bg-1000 rounded-2 py-2">
-                    <a class="dropdown-item fw-bold text-warning" href="#!"><span>Gustavo Daroch</span></a>
+                    <a class="dropdown-item fw-bold text-warning" href="#!"><span>Gonzalo Daroch</span></a>
 
                       <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="pages/authentication/card/logout.html">Salir</a>
+                    <a class="dropdown-item" href="login.html">Salir</a>
                   </div>
                 </div>
               </li>
@@ -189,22 +189,27 @@
 
           <!--MAIN CONTENT-->
 
-
-          
-          <div class="card mb-2" style="height: 10vh;">
-            <div class="card-body pt-0">
-              <div class="col-md-auto p-3">
-                <form class="row align-items-center g-3">
-                  <div class="col-auto">
-                    <h6 class="text-700 mb-0">Mostrar data: </h6>
+          <div class="row mb-3">
+            <div class="col">
+              <div class="card bg-100 shadow-none border">
+                <div class="row gx-0 flex-between-center">
+                  <div class="col-sm-auto d-flex align-items-center"><img class="ms-n2" src="assets/img/illustrations/crm-bar-chart.png" alt="" width="90" />
+                    <div>
+                      <h6 class="text-primary fs--1 mb-0">Bienvenido a </h6>
+                      <h4 class="text-primary fw-bold mb-0"> Panel Monitoreo <span class="text-info fw-medium">EFE Solar</span></h4>
+                    </div><img class="ms-n4 d-md-none d-lg-block" src="assets/img/illustrations/crm-line-chart.png" alt="" width="150" />
                   </div>
-                  <div class="col-md-auto position-relative">
-                    <input class="form-control form-control-sm datetimepicker ps-4" id="CRMDateRange" type="text" data-options="{&quot;mode&quot;:&quot;range&quot;,&quot;dateFormat&quot;:&quot;M d&quot;,&quot;disableMobile&quot;:true , &quot;defaultDate&quot;: [&quot;Dec 28&quot;, &quot;Dec 28&quot;] }" /><span class="fas fa-calendar-alt text-primary position-absolute top-50 translate-middle-y ms-2"> </span>
+                  <div class="col-md-auto p-3">
+                    <form class="row align-items-center g-3">
+                      <div class="col-auto">
+                        <h6 class="text-700 mb-0">Datos Para: </h6>
+                      </div>
+                      <div class="col-md-auto position-relative">
+                        <input class="form-control form-control-sm datetimepicker ps-4" id="CRMDateRange" type="text" data-options="{&quot;mode&quot;:&quot;range&quot;,&quot;dateFormat&quot;:&quot;M d&quot;,&quot;disableMobile&quot;:true , &quot;defaultDate&quot;: [&quot;Dic 01&quot;, &quot;Dic 28&quot;] }" /><span class="fas fa-calendar-alt text-primary position-absolute top-50 translate-middle-y ms-2"> </span>
+                      </div>
+                    </form>
                   </div>
-                  <div class="col-auto position-relative" style="padding-left: 85vh;">
-                    <button type="button" class="btn btn-primary" style="height: 6vh;">Buscar</button>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
