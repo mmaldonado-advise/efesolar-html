@@ -21,3 +21,15 @@
     border-radius: 50%;
     display: inline-block;
 }
+
+table td.energy { text-align: end;}
+table td.energyPrice { text-align: end;}
+table td.budget { text-align: end;}
+table td.budgetPrice { text-align: end;}
+table td.percentage { text-align: end;}
+table td.difference { text-align: end;}
+table td.transport { text-align: end;}
+table td.service { text-align: end;}
+table td.others { text-align: end;}
+table td.total { text-align: end;}
+table td.fixed { text-align: end;}

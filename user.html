@@ -81,6 +81,17 @@
             console.log(myModal)
             myModal.hide()
         }
+
+        function showCreateModal(){
+            var myModal = new bootstrap.Modal(document.getElementById('createModal'))
+            myModal.show()
+        }
+
+        function closeCreateModal(){
+            var myModal = new bootstrap.Modal(document.getElementById('createModal'))
+            console.log(myModal)
+            myModal.hide()
+        }
     </script>
   </head>
 
@@ -147,6 +158,15 @@
                             <option value="fronius">Usuario</option>
                         </select>
                     </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                          Actividad
+                      </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                      <select class="form-control" name="usertype" id="usertype" form="usertype" style="width: 50vh">
+                          <option value="fimer">Activo</option>
+                          <option value="fronius">Inactivo</option>
+                      </select>
+                  </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-info"    onclick="closeUpdateModal()">Actualizar</button>
@@ -154,6 +174,45 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="createModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                  <h5 class="modal-title">Crear Usuario</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+            </div>
+              <div class="modal-body">
+                <div class="col-md-auto p-3" style="size: 85%; height: 32vh;">
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                          Correo
+                      </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                      <input type="email" class="form-control" placeholder="Correo" aria-label="plant">
+                  </div>
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                          Usuario
+                      </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                      <input type="text" class="form-control" placeholder="Usuario" aria-label="plant">
+                  </div>
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                          Contraseña
+                      </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+                      <input type="password" class="form-control" placeholder="Contraseña" aria-label="plant">
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success"    onclick="closeCreateModal()">Crear</button>
+                <button type="button" class="btn btn-secondary" onclick="closeCreateModal()">Cancelar</button>
+              </div>
+           </div>
+        </div>
+      </div>
     </div>
 
 
@@ -280,6 +339,7 @@
             </ul>
           </nav>
 
+          <!--
           <div class="card mb-3">
             <div class="card-body pt-0">
                 <div class="tab-content">
@@ -311,12 +371,18 @@
                 </div>
             </div>
           </div>
+          -->
 
           <div class="card mb-3">
             <div class="card-header">
-                <div class="row flex-between-end">
-                    <div class="space" style="padding-top: 2vh;"></div>  
-                    <h5>Lista de Usuarios</h5>
+                <div class="row flex-between-end" style="height: 5vh;">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <h5>Lista de Usuarios</h5>
+                      </div>
+                      <div class="space" style="margin-left: 69.6%;"></div>
+                      <button type="button" class="btn btn-success" onclick="showCreateModal()">Crear Usuario</button>
+                    </div>
                 </div>
             </div>
             <div class="card-body pt-0">
